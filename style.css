@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} 
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: white;
+}
+h1 {
+  background-color: cyan;
+  color: blue;
+}
+#displayCars {
+  background-color: cyan;
+  height:50vh;
+}
+#back, #ahead {
+  position: relative;
+  bottom: 40%;
+  background-color: cyan;
+  width: 4ex;
+  height: 4ex;
+  border-radius: 5px;
+}
+img {
+  width: 80%;
+  height: 70%;
+  margin: 8% 0;
+  border: 10px solid cyan; 
+  border-radius: 5px;
+}
+#FAQ {
+  margin: 10px;
+  background-color: cyan;
+  color: blue;
+}
+h2 {
+  text-align: center;
+}
+b {
+  color: blue;
+}
+b::after, b::before {
+  content: "\a";
+  white-space: pre;
+}
+b:hover + q {
+  display: inline;
+}
+q {
+  display: none;
+}
+#about {
+  background-color: cyan;
+  font-weight: bold;
+  position: relative;
+  top: 20%;
+  color: blue;
+}

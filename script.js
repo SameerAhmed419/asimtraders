@@ -4,15 +4,15 @@ let currentImageNumber = 1;
 function imageAhead() {
   switch(currentImageNumber) {
     case 1:
-      imageElement.src = `/images/${imageSources[1]}`; 
+      imageElement.src = `/${imageSources[1]}`; 
       currentImageNumber = 2;
     break;
     case 2:
-      imageElement.src = `/images/${imageSources[2]}`;
+      imageElement.src = `/${imageSources[2]}`;
       currentImageNumber = 3;
     break;
     case 3:
-      imageElement.src = `/images/${imageSources[0]}`;
+      imageElement.src = `/${imageSources[0]}`;
       currentImageNumber = 1;
     break;
     default:
@@ -22,15 +22,15 @@ function imageAhead() {
 function imageBehind() {
   switch(currentImageNumber) {
     case 1:
-      imageElement.src = `/images/${imageSources[2]}`; 
+      imageElement.src = `/${imageSources[2]}`; 
       currentImageNumber = 3;
     break;
     case 2:
-      imageElement.src = `/images/${imageSources[0]}`;
+      imageElement.src = `/${imageSources[0]}`;
       currentImageNumber = 1;
     break;
     case 3:
-      imageElement.src = `/images/${imageSources[1]}`;
+      imageElement.src = `/${imageSources[1]}`;
       currentImageNumber = 2;
     break;
     default:

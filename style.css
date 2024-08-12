@@ -7,6 +7,9 @@
     min-width: 480px;
     min-height: 360px;
   }
+  #about {
+    font-size: 2em;
+  }
 }
 @keyframes imageShowCase {
   from {

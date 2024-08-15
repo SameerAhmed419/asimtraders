@@ -1,3 +1,4 @@
+/* adjustments for larger screens */
 @media only screen and (min-width: 768px) {
   body > div {
     width: 50%;
@@ -11,6 +12,7 @@
     font-size: 2em;
   }
 }
+/* the car-showcase animation */
 @keyframes imageShowCase {
   from {
     transform: scaleX(1);
@@ -22,6 +24,7 @@
     transform: scaleX(0);
   }
 }
+/* Styling for the whole page */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,9 +37,11 @@ body {
   background-color: #F2F2F2;
   color: #F7F7F7;
 }
+/* TITLE */
 h1 {
   background-color: #2E4053;
 }
+/* car showcase */
 #displayCars {
   background-color: #F7F7F7;
   height:50vh;
@@ -57,6 +62,20 @@ img {
   animation: imageShowCase 4s linear 2s infinite alternate;
   overflow: hidden;
 }
+/* car-buying section */
+#buyCars {
+  background-color: #F7F7F7;
+  margin: auto;
+  margin-top: 50px;
+  color: #2E4053;
+}
+#buyCarButton {
+  color: white;
+  background-color: #2E4053;
+  border: none;
+  margin-bottom: 10px;
+}
+/* FAQ section */
 #FAQ {
   background-color: #F7F7F7;
   margin: auto;
@@ -73,22 +92,15 @@ b::after, b::before {
   content: "\a";
   white-space: pre;
 }
-b:hover + q {
+#FAQ:hover > q {
   display: inline;
-}
-#FAQ > b::after {
-  content: " [+] \a";
-  white-space: pre;
-}
-#FAQ > b:hover::after {
-  content: " [-] \a";
-  white-space: pre;
 }
 q {
   display: none;
   color: #2E4053;
   font-family: monospace;
 }
+/* about section */
 #about {
   background-color: #2E4053;
   font-weight: bold;

@@ -48,29 +48,48 @@ buttonToBuyCar.addEventListener("click", () => {
 //Love Declaration
 function love() {
   const password = "qeedi";
-  const userEnteredPassword = prompt("Enter the password: ");
+  const userEnteredPassword = prompt("Enter the password for the hidden feature or just continue: ");
   const allElements = document.body.querySelectorAll("*");
-  //This is just a joke
-  alert("This website is nothing serious. It is just a demo. Thanks for visiting :)");
   if (userEnteredPassword !== password) {
     return;
   }
-  setTimeout(() => {
-    allElements.forEach(element => {
-      element.style = "font-family: cursive; color: red; font-weight: bold; background-color: lightpink; transition: all 3s;";
-    });
-  }, 10000);
-  setTimeout(() => {
-    allElements.forEach(element => element.style.opacity = "0");
-    document.body.addEventListener("transitionend", () => {
-      allElements.forEach(element => element.style.display = "none");
-      document.body.style.display = "block";
-      document.body.style.backgroundColor = "lightpink";
-      const loveImage = document.getElementById("loveImage");
-      loveImage.style.display = "inline-block";
-      loveImage.style.opacity = "1";
-      loveImage.style.marginTop = "30vh";
-    });
-  }, 15000);
+  setTimeout(()=>turnPink(allElements), 10000);
+  setTimeout(()=>showLoveImage(allElements), 15000);
 }
 love();
+function turnPink(allElements) {
+  allElements.forEach(element => {
+      element.style = "font-family: cursive; color: red; font-weight: bold; background-color: lightpink; transition: all 3s;";
+    });
+  document.body.style.backgroundColor = "lightpink";
+}
+function showLoveImage(allElements) {
+  const loveImage = document.getElementById("loveImage");
+  const loveDiv = document.getElementById("loveDiv");
+  const audioPlay = document.getElementById("playAudio");
+  allElements.forEach(element => element.style.opacity = "0");
+  allElements[0].ontransitionend = () => {
+    allElements.forEach(element => element.style.display = "none");
+    document.body.style.display = "block";
+    loveImage.style.display = "inline-block";
+    loveDiv.style.display = "block";
+    audioPlay.style.display = "inline-block";
+    setTimeout(() => {
+      loveImage.style.opacity = "1";
+      loveDiv.style.opacity = "1";
+      audioPlay.style.opacity = "1";
+      loveDiv.style.marginTop = "25vh";
+      audioPlay.addEventListener("click", playAudio);
+      audioPlay.focus();
+    }, 100);
+  };
+}
+function playAudio() {
+  const loveAudio = document.getElementById("loveAudio");
+  loveAudio.play();
+  loveAudio.onended = () => {
+    setTimeout(()=>{
+      location.reload();
+    }, 5000);
+  };
+}

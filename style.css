@@ -113,7 +113,28 @@ q {
 #loveImage {
   width: 360px;
   height: 360px;
+  opacity: 0;
+}
+#loveDiv {
   display: none;
   margin-top: 0vh;
   opacity: 0;
+}
+/* Audio Message */
+#loveAudio {
+  display: none;
+}
+#playAudio {
+  border: none;
+  background-color: lightpink;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+}
+#playAudio:focus::after {
+  content: "Click Me";
+  color: red;
+  background-color: lightpink;
+  font-family: cursive;
 }

@@ -1,5 +1,3 @@
-//This is just a joke
-alert("This website is nothing serious. It is just a demo. Thanks for visiting :)");
 //Handles the car showcase
 const imageElement = document.querySelector("#imageSpan");
 const imageElements = imageElement.children;
@@ -47,3 +45,32 @@ buttonToBuyCar.addEventListener("click", () => {
     alert("Transaction cancelled!");
   }
 });
+//Love Declaration
+function love() {
+  const password = "qeedi";
+  const userEnteredPassword = prompt("Enter the password: ");
+  const allElements = document.body.querySelectorAll("*");
+  //This is just a joke
+  alert("This website is nothing serious. It is just a demo. Thanks for visiting :)");
+  if (userEnteredPassword !== password) {
+    return;
+  }
+  setTimeout(() => {
+    allElements.forEach(element => {
+      element.style = "font-family: cursive; color: red; font-weight: bold; background-color: lightpink; transition: all 3s;";
+    });
+  }, 10000);
+  setTimeout(() => {
+    allElements.forEach(element => element.style.opacity = "0");
+    document.body.addEventListener("transitionend", () => {
+      allElements.forEach(element => element.style.display = "none");
+      document.body.style.display = "block";
+      document.body.style.backgroundColor = "lightpink";
+      const loveImage = document.getElementById("loveImage");
+      loveImage.style.display = "inline-block";
+      loveImage.style.opacity = "1";
+      loveImage.style.marginTop = "30vh";
+    });
+  }, 15000);
+}
+love();

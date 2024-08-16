@@ -93,6 +93,6 @@ function playAudio() {
   loveAudio.onended = () => {
     setTimeout(()=>{
       location.reload();
-    }, 5000);
+    }, 10000);
   };
 }

@@ -50,6 +50,7 @@ buttonToBuyCar.addEventListener("click", () => {
 });
 //Love Declaration
 function love() {
+  const allElements = document.body.querySelectorAll("*");
   setTimeout(()=>turnPink(allElements), 10000);
   setTimeout(()=>showLoveImage(allElements), 15000);
 }

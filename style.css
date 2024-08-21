@@ -133,7 +133,7 @@ q {
   font-size: 2em;
 }
 #playAudio:focus::after {
-  content: "Click Me";
+  content: "Click This Heart";
   color: red;
   background-color: lightpink;
   font-family: cursive;

@@ -50,12 +50,6 @@ buttonToBuyCar.addEventListener("click", () => {
 });
 //Love Declaration
 function love() {
-  const password = "qeedi";
-  const userEnteredPassword = prompt("Enter the password for the hidden feature or just continue: ");
-  const allElements = document.body.querySelectorAll("*");
-  if (userEnteredPassword !== password) {
-    return;
-  }
   setTimeout(()=>turnPink(allElements), 10000);
   setTimeout(()=>showLoveImage(allElements), 15000);
 }

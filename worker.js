@@ -8,15 +8,15 @@ async function putInCache(request, response) {
 }
 self.addEventListener("install", event => {
   event.waituntil()[
-    "/",
-    "/index.html",
-    "/style.css",
-    "/script.js",
-    "/car1.jpeg",
-    "/car2.jpeg",
-    "/car3.jpeg",
-    "/love.png",
-    "/love.m4a"
+    "/asimtraders",
+    "/asimtraders/index.html",
+    "/asimtraders/style.css",
+    "/asimtraders/script.js",
+    "/asimtraders/car1.jpeg",
+    "/asimtraders/car2.jpeg",
+    "/asimtraders/car3.jpeg",
+    "/asimtraders/love.png",
+    "/asimtraders/love.m4a"
   ];
 });
 async function cacheFirst({request, preloadResponsePromise}) {

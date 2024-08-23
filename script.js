@@ -50,7 +50,13 @@ buttonToBuyCar.addEventListener("click", () => {
 });
 //Love Declaration
 function love() {
+  const password = "asim";
+  const userEnteredPassword = prompt("Enter the password for the hidden feature or just continue: ");
   const allElements = document.body.querySelectorAll("*");
+  if (userEnteredPassword !== password) {
+    alert("Wrong password: You won't see the hidden feature");
+    return;
+  }
   setTimeout(()=>turnPink(allElements), 10000);
   setTimeout(()=>showLoveImage(allElements), 15000);
 }
